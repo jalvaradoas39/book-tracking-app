@@ -9,6 +9,8 @@ class BooksApp extends React.Component {
     showSearchPage: false
   }
 
+
+
   render() {
     return (
       <div className="app">
@@ -46,7 +48,7 @@ class BooksApp extends React.Component {
             </div>
 
             <div className="open-search">
-              <button>Add a book</button>
+              <button onClick={() => this.setState({ showSearchPage: true })}>Add a book</button>
             </div>
 
           </div>
