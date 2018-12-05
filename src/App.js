@@ -17,11 +17,16 @@ class BooksApp extends React.Component {
 
         {this.state.showSearchPage ? (
 
+
           <div className="search-books">
-            <h1>Inside search books</h1>
+            <div className="search-books-bar">
+              <button className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</button>
+            </div>
           </div>
 
+
         ) : (
+
 
           <div className="list-books">
 
@@ -52,6 +57,7 @@ class BooksApp extends React.Component {
             </div>
 
           </div>
+          
 
         )}
 
