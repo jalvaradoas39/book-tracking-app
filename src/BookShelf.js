@@ -11,8 +11,11 @@ class BookShelf extends React.Component {
 
 			<div className="bookshelf">
 
+				<h2 className="bookshelf-title">Bookshelf Title</h2>
+				<div className="bookshelf-books">
+					
+				</div>
 
-				
 			</div>
 
 		)

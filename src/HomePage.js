@@ -18,9 +18,9 @@ class HomePage extends React.Component {
 				</div>
 
 				<div className="list-books-content">
-					<BookShelf />
-					<BookShelf />
-					<BookShelf />
+					<BookShelf shelf="Currently Reading" />
+					<BookShelf shelf="Want to Read" />
+					<BookShelf shelf="Read" />
 				</div>
 
 				<div className="open-search">
