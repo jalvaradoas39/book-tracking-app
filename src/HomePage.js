@@ -18,7 +18,9 @@ class HomePage extends React.Component {
 				</div>
 
 				<div className="list-books-content">
-
+					<BookShelf />
+					<BookShelf />
+					<BookShelf />
 				</div>
 
 				<div className="open-search">
