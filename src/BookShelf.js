@@ -21,7 +21,7 @@ class BookShelf extends React.Component {
 								<li key={index}>
 									
 									<div className="book-top">
-										<div className="book-cover">
+										<div className="book-cover" style={ {width: 128, height: 170, backgroundImage: book.imageLinks ? (`url(${book.imageLinks.thumbnail})`) : (`url(https://dummyimage.com/128x170/4f4f4f/ffffff.jpg&text=No+Book+Art)`)} }>
 											
 										</div>
 										<div className="book-shelf-changer">
