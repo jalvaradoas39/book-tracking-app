@@ -30,7 +30,7 @@ class App extends React.Component {
           
           <Route path="/" exact render={
             () => (
-              <HomePage />
+              <HomePage books={this.state.myReads} />
             )
           }></Route>
 
