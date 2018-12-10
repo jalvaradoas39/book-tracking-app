@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 class HomePage extends React.Component {
@@ -9,6 +10,7 @@ class HomePage extends React.Component {
 		return (
 			// <h1>Rendering Home Page</h1>
 			<div className="list-books">
+
 				<div className="list-books-title">
 					
 				</div>
@@ -18,8 +20,9 @@ class HomePage extends React.Component {
 				</div>
 
 				<div className="open-search">
-					
+
 				</div>
+
 			</div>
 		)
 	}
