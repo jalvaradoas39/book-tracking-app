@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
+
 class HomePage extends React.Component {
 
 
@@ -24,7 +25,7 @@ class HomePage extends React.Component {
 						<button>Add a book</button>
 					</Link>
 				</div>
-				
+
 			</div>
 		)
 	}
