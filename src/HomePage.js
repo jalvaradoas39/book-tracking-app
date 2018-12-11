@@ -19,13 +19,16 @@ class HomePage extends React.Component {
 
 				<div className="list-books-content">
 					<BookShelf shelf="Currently Reading" 
-							   books={ this.props.books.filter(book => book.shelf === 'currentlyReading') } />
+							   books={ this.props.books.filter(book => book.shelf === 'currentlyReading') }
+							   updateShelf={this.props.updateShelf} />
 
 					<BookShelf shelf="Want to Read"
-							   books={ this.props.books.filter(book => book.shelf === 'wantToRead') } />
+							   books={ this.props.books.filter(book => book.shelf === 'wantToRead') }
+							   updateShelf={this.props.updateShelf} />
 
 					<BookShelf shelf="Read" 
-							   books={ this.props.books.filter(book => book.shelf === 'read') } />
+							   books={ this.props.books.filter(book => book.shelf === 'read') }
+							   updateShelf={this.props.updateShelf} />
 				</div>
 
 				<div className="open-search">

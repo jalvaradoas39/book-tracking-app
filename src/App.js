@@ -21,6 +21,10 @@ class App extends React.Component {
     })
   }
 
+  updateShelf(book, selectTarget) {
+    console.log(book);
+    console.log(selectTarget)
+  }
 
 
   render() {
@@ -30,7 +34,8 @@ class App extends React.Component {
           
           <Route path="/" exact render={
             () => (
-              <HomePage books={this.state.myReads} />
+              <HomePage books={this.state.myReads}
+                        updateShelf={this.updateShelf} />
             )
           }></Route>
 
