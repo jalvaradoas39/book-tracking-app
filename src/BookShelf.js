@@ -18,19 +18,24 @@ class BookShelf extends React.Component {
 						{this.props.books.map((book, index) => 
 
 							<li key={index}>
-								<div className="book-top">
-									<div className="book-cover" style={ {width: 128, height: 170, backgroundImage: book.imageLinks ? (`url(${book.imageLinks.thumbnail})`) : (`url(https://dummyimage.com/128x170/4f4f4f/ffffff.jpg&text=No+Book+Art)`)} }>
-										
+
+								<div className="book">		
+									<div className="book-top">
+										<div className="book-cover" style={ {width: 128, height: 170, backgroundImage: book.imageLinks ? (`url(${book.imageLinks.thumbnail})`) : (`url(https://dummyimage.com/128x170/4f4f4f/ffffff.jpg&text=No+Book+Art)`)} }>
+											
+										</div>
+										<div className="book-shelf-changer">
+											<select value={book.shelf} onChange={(evt) => this.props.updateShelf(book, evt.target.value)}>
+												<option disabled>Move to...</option>
+												<option value="currentlyReading">Currently Reading</option>
+												<option value="wantToRead">Want to Read</option>
+												<option value="read">Read</option>
+												<option value="none">None</option>
+											</select>
+										</div>
 									</div>
-									<div className="book-shelf-changer">
-										<select value={book.shelf} onChange={(evt) => this.props.updateShelf(book, evt.target.value)}>
-											<option disabled>Move to...</option>
-											<option value="currentlyReading">Currently Reading</option>
-											<option value="wantToRead">Want to Read</option>
-											<option value="read">Read</option>
-											<option value="none">None</option>
-										</select>
-									</div>
+
+									<div className="book-title">{book.title}</div>
 								</div>
 							</li>
 
