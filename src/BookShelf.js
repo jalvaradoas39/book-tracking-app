@@ -24,11 +24,11 @@ class BookShelf extends React.Component {
 									</div>
 									<div className="book-shelf-changer">
 										<select>
-											<option>Move to...</option>
-											<option>Currently Reading</option>
-											<option>Want to Read</option>
-											<option>Read</option>
-											<option>None</option>
+											<option disabled>Move to...</option>
+											<option value="currentlyReading">Currently Reading</option>
+											<option value="wantToRead">Want to Read</option>
+											<option value="read">Read</option>
+											<option value="none">None</option>
 										</select>
 									</div>
 								</div>
