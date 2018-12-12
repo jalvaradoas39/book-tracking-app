@@ -27,9 +27,9 @@ class App extends React.Component {
 
 
 
-  updateShelf = (book, event) => {
+  updateShelf = (book, evt) => {
     return new Promise(resolve => {
-      BooksAPI.update(book, event).then(res => {
+      BooksAPI.update(book, evt.target.value).then(res => {
         BooksAPI.getAll().then(res => {
           this.setState(
             {
