@@ -26,22 +26,22 @@ class App extends React.Component {
   }
 
 
-  updateShelf(bookObj, selectTargetVal) {
-    // console.log(this.state.myReads.filter(b => b.id === bookObj.id));
-    // console.log(bookObj.id);
-    // console.log(selectTargetVal);
 
-    if (selectTargetVal === 'none') {
-      this.setState(prevState => ({
-        myReads: prevState.myReads.filter(prevBook => prevBook.id !== bookObj.id),
-      }))
-    }
+  updateShelf = (book, event) => {
+    return new Promise(resolve => {
+      BooksAPI.update(book, event).then(res => {
+        BooksAPI.getAll().then(res => {
+          this.setState(
+            {
+              myReads: res
+            },
+            resolve(res)
+          );
+        });
+      });
+    });
+  };
 
-
-
-
-
-  }
 
 
   render() {
