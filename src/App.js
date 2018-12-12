@@ -8,10 +8,14 @@ import './App.css';
 
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      myReads: [],
+      searchedBooks: []
+    }
 
-  state = {
-    myReads: [],
-    searchedBooks: []
+    this.updateShelf = this.updateShelf.bind(this);
   }
 
 
@@ -21,9 +25,22 @@ class App extends React.Component {
     })
   }
 
-  updateShelf(book, selectTarget) {
-    console.log(book);
-    console.log(selectTarget)
+
+  updateShelf(bookObj, selectTargetVal) {
+    // console.log(this.state.myReads.filter(b => b.id === bookObj.id));
+    // console.log(bookObj.id);
+    // console.log(selectTargetVal);
+
+    if (selectTargetVal === 'none') {
+      this.setState(prevState => ({
+        myReads: prevState.myReads.filter(prevBook => prevBook.id !== bookObj.id),
+      }))
+    }
+
+
+
+
+
   }
 
 
@@ -48,7 +65,7 @@ class App extends React.Component {
 
         </div>
       </BrowserRouter>
-      
+
     )
   }
 
