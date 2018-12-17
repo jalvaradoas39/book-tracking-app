@@ -15,7 +15,7 @@ class BookShelf extends React.Component {
 				<div className="bookshelf-books">
 
 					<ul className="books-grid">
-						{this.props.books.map((book, index) => 
+						{this.props.filteredBooks.map((book, index) => 
 
 							<li key={index}>
 
