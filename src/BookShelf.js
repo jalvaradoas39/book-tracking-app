@@ -7,6 +7,7 @@ class BookShelf extends React.Component {
 
 
 	render() {
+
 		return (
 
 			<div className="bookshelf">
@@ -15,9 +16,21 @@ class BookShelf extends React.Component {
 				<div className="bookshelf-books">
 
 					<ul className="books-grid">
-						{this.props.filteredBooks.map((book, index) => 
+						
+						{this.props.books.length === 0 ? (
+				            <div>
+				              <div className="no-results">
+				                <h5>Empty Shelf</h5>
+				              </div>
+				            </div>
+						) : (
+							null
+						)}
 
-							<li key={index}>
+
+						{this.props.books.map((book, index) => 
+
+							<li key={book.id}>
 
 								<div className="book">		
 									<div className="book-top">
@@ -25,7 +38,7 @@ class BookShelf extends React.Component {
 											
 										</div>
 										<div className="book-shelf-changer">
-											<select value={book.shelf} onChange={(evt) => this.props.updateShelf(book, evt)}>
+											<select value={book.shelf} onChange={(evt) => this.props.shelfHandler(book, evt)}>
 												<option disabled>Move to...</option>
 												<option value="currentlyReading">Currently Reading</option>
 												<option value="wantToRead">Want to Read</option>
